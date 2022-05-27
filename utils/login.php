@@ -8,9 +8,14 @@
   $dbPassword = '';
   $dbRole = '';
 
-  $link = dbConnection();
-  $loginQuery = ("SELECT db_user, db_pass, db_role FROM login_data WHERE db_user = '$user' AND db_pass = '$password'");
-  $result = odbc_exec($link, $loginQuery);
+  $db = dbConnection();
+  $loginQuery = ("SELECT id, password, role FROM employee WHERE id = '$user' AND password = '$password'");
+  $result = mysqli_query($db, $loginQuery);
+
+  echo "<pre>";
+  var_dump($result);
+  var_dump(mysqli_fetch_assoc($result));
+  echo "</pre>";
 
   while ($row = odbc_fetch_array($result)) {
     $dbUser = $row['db_user'];
