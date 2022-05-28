@@ -11,11 +11,11 @@ function dbConnection()
   $password = "root";
   $database = "ghost_burgers";
 
-  if (!($link = mysqli_connect($host, $username, $password, $database))) {
+  if (!($dbConnection = mysqli_connect($host, $username, $password, $database))) {
     echo "Error conectando a la base de datos.";
     exit();
   } else {
     // echo "<br>conecto";
   }
-  return $link;
+  return $dbConnection;
 }

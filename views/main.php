@@ -1,30 +1,19 @@
 <?php
+require '../shared/head.php';
+require '../utils/get_current_session_branch.php';
 require '../shared/header.php';
-get_header('Ghost Burgers | Home');
 
-$name = 'Luis Ángel';
-$place = 'Ciudad de México';
-$role = '';
+get_head('Ghost Burgers | Home');
+
+$place = get_current_session_branch();
+$role = get_current_session_role();
+get_header($role);
 ?>
-
-<div class="welcome">
-  <p>Bienvenido <?php echo $name; ?></p>
-</div>
-
-<a href="../index.php" class="logout">Salir</a>
-
-<nav class="mainNav">
-  <ul class="wrapper">
-    <li><a href="#">Productos</a></li>
-    <li><a href="#">Sucursales</a></li>
-    <li><a href="#">Precios</a></li>
-  </ul>
-</nav>
 
 <main class="hero">
   <div class="wrapper">
-    <p>Sucursal: <strong><?php echo $place; ?></strong></p>
     <p>Rol: <strong><?php echo $role; ?></strong></p>
+    <p>Sucursal: <strong><?php echo $place; ?></strong></p>
   </div>
 </main>
 </body>
