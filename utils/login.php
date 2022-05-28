@@ -1,45 +1,31 @@
-  <?php
-  include './php_connection.php';
-  session_start();
+<?php
+include './php_connection.php';
+session_start();
 
-  $user = $_POST['user'];
-  $password = $_POST['password'];
-  $dbUser = '';
-  $dbPassword = '';
-  $dbRole = '';
+$user = $_POST['user'];
+$password = $_POST['password'];
+$username = '';
+$passwordDB = '';
+$role = '';
 
-  $db = dbConnection();
-  $loginQuery = ("SELECT id, password, role FROM employee WHERE id = '$user' AND password = '$password'");
-  $result = mysqli_query($db, $loginQuery);
+$dbConnection = dbConnection();
+$loginQuery = ("SELECT email, password, role, fullname, branch FROM employee WHERE email = '$user' AND password = '$password'");
+$result = mysqli_query($dbConnection, $loginQuery);
 
-  echo "<pre>";
-  var_dump($result);
-  var_dump(mysqli_fetch_assoc($result));
-  echo "</pre>";
+while ($row = mysqli_fetch_assoc($result)) {
+  $username = $row['fullname'];
+  $passwordDB = $row['password'];
+  $role = $row['role'];
+  $branch = $row['branch'];
+}
 
-  while ($row = odbc_fetch_array($result)) {
-    $dbUser = $row['db_user'];
-    $dbPass = $row['db_pass'];
-    $dbRole = $row['db_role'];
-  }
+if ($username != '' && $passwordDB != '') {
+  $_SESSION['user'] = $username;
+  $_SESSION['role'] = $role;
+  $_SESSION['branch'] = $branch;
+  $_SESSION['connection'] = $dbConnection;
 
-  if ($dbUser != '' && $dbPass != '') {
-    $_SESSION['user'] = $dbUser;
-    $_SESSION['role'] = $dbRole;
-
-    include('../views/management.php');
-    // switch ($dbRole) {
-    //   case 'management':
-    //     include('../views/management.php');
-    //     break;
-    //   case 'deliveryman':
-    //     include('../views/deliveryman.php');
-    //     break;
-    //   case 'chef':
-    //     include('../views/chef.php');
-    //     break;
-    // }
-  } else {
-    include('../views/index_fail.php');
-  }
-  ?>
+  include('../views/main.php');
+} else {
+  include('../views/index_fail.php');
+}

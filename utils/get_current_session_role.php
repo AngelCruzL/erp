@@ -4,13 +4,13 @@ function get_current_session_role()
   $role = $_SESSION['role'];
 
   switch ($role) {
-    case 'admin':
+    case '1':
       return 'Administrador';
-    case 'management':
+    case '2':
       return 'Gestor';
-    case 'deliveryman':
+    case '3':
       return 'Repartidor';
-    case 'chef':
+    case '4':
       return 'Cocinero';
   }
   return $role;

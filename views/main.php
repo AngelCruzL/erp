@@ -1,10 +1,11 @@
 <?php
-require '../shared/header.php';
-get_header('Ghost Burgers | Home');
+require '../utils/get_current_session_role.php';
+require '../shared/head.php';
+get_head('Ghost Burgers | Home');
 
-$name = 'Luis Ángel';
-$place = 'Ciudad de México';
-$role = '';
+$name = $_SESSION['user'];
+$place = $_SESSION['branch'];
+$role = get_current_session_role();
 ?>
 
 <div class="welcome">
@@ -23,8 +24,8 @@ $role = '';
 
 <main class="hero">
   <div class="wrapper">
-    <p>Sucursal: <strong><?php echo $place; ?></strong></p>
     <p>Rol: <strong><?php echo $role; ?></strong></p>
+    <p>Sucursal: <strong><?php echo $place; ?></strong></p>
   </div>
 </main>
 </body>
