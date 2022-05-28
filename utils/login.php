@@ -20,7 +20,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 
 if ($username != '' && $passwordDB != '') {
-  $_SESSION['user'] = $username;
+  $_SESSION['username'] = $username;
   $_SESSION['role'] = $role;
   $_SESSION['branch'] = $branch;
   $_SESSION['connection'] = $dbConnection;
