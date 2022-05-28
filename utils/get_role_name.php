@@ -1,8 +1,6 @@
 <?php
-function get_current_session_role()
+function get_role_name($role)
 {
-  $role = $_SESSION['role'];
-
   switch ($role) {
     case '1':
       return 'Administrador';

@@ -1,8 +1,6 @@
 <?php
-function get_current_session_branch()
+function get_branch_name($branch)
 {
-  $branch = $_SESSION['branch'];
-
   switch ($branch) {
     case '1':
       return 'Azcapotzalco';
