@@ -32,6 +32,7 @@ CREATE TABLE customer(
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	firstname VARCHAR(75) NOT NULL,
 	lastname VARCHAR(75) NOT NULL,
+	fullname VARCHAR(151) GENERATED ALWAYS AS (CONCAT(firstname, ' ', lastname)),
 	email VARCHAR(100) NOT NULL,
 	password VARCHAR(120) NOT NULL,
 	address VARCHAR(200) NOT NULL,
@@ -44,9 +45,12 @@ CREATE TABLE employee(
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	firstname VARCHAR(75) NOT NULL,
 	lastname VARCHAR(75) NOT NULL,
+	fullname VARCHAR(151) GENERATED ALWAYS AS (CONCAT(firstname, ' ', lastname)),
+	email VARCHAR(100) NOT NULL,
 	password VARCHAR(120) NOT NULL,
 	phone_number VARCHAR(20) NOT NULL,
-	profile_picture VARCHAR(150) NOT NULL,
+	profile_picture VARCHAR(450) NOT NULL,
+	is_active BOOLEAN NOT NULL DEFAULT 1,
 	role TINYINT DEFAULT 3 REFERENCES role (id) ON DELETE SET DEFAULT,
   branch TINYINT REFERENCES branch (id) ON DELETE SET NULL
 );
