@@ -9,7 +9,7 @@ get_head('Ghost Burgers | Login', true);
 
   <img src='./img/logo.png' class='logo mt-3' alt='Logo ghost burgers' />
 
-  <form class='mt-5' method='POST' action='utils/login.php'>
+  <form class='mt-5' method='POST' action='controller/login.php'>
     <label>
       Usuario
       <input type='text' name='user' id='user' placeholder='Usuario' required />

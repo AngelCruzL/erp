@@ -12,7 +12,7 @@ get_head('Ghost Burgers | Login');
   <br /><br />
   <p>Datos de ingreso incorrectos</p>
 
-  <form class='mt-5' method='POST' action='../utils/login.php'>
+  <form class='mt-5' method='POST' action='../controller/login.php'>
     <label>
       Usuario
       <input type='text' name='user' id='user' placeholder='Usuario' required />

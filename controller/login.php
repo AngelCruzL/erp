@@ -1,5 +1,5 @@
 <?php
-include './php_connection.php';
+include '../config/db_connection.php';
 session_start();
 
 $user = $_POST['user'];
