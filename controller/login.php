@@ -7,6 +7,7 @@ $password = $_POST['password'];
 $username = '';
 $passwordDB = '';
 $role = '';
+$branch = '';
 
 $dbConnection = dbConnection();
 $loginQuery = ("SELECT email, password, role, fullname, branch FROM employee WHERE email = '$user' AND password = '$password'");
@@ -25,7 +26,7 @@ if ($username != '' && $passwordDB != '') {
   $_SESSION['branch'] = $branch;
   $_SESSION['connection'] = $dbConnection;
 
-  include('../views/main.php');
+  include('../views/home.php');
 } else {
   include('../views/index_fail.php');
 }
