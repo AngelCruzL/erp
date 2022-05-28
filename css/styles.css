@@ -26,6 +26,16 @@ a {
   text-decoration: none;
   color: #4f190d;
 }
+table {
+  inline-size: 100%;
+  margin-inline: auto;
+}
+th {
+  padding-block: 0.5rem;
+}
+tbody tr:nth-child(odd) {
+  background-color: #fecb7d;
+}
 .wrapper {
   inline-size: min(92vw, 75rem);
   margin-inline: auto;
@@ -63,7 +73,31 @@ a {
 .mt-3 {
   margin-block-start: 3rem;
 }
-
+.mt-2 {
+  margin-block-start: 2rem;
+}
+.tac {
+  text-align: center;
+}
+.btn {
+  margin-block: auto;
+  padding-block: 0.75em;
+  padding-inline: 1.5em;
+  background-color: #f5e4c6;
+  color: #4f190d;
+  border: none;
+  border-radius: 0.25rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+.btn:hover {
+  color: #f5e4c6;
+  background-color: #4f190d;
+}
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /** Login  */
 form {
   display: flex;
@@ -100,15 +134,13 @@ form input:is([type='submit']) {
 
 /** Main  */
 .welcome {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
   color: #fff;
   background-color: #000;
   padding: 1rem;
 }
-.logout {
-  position: absolute;
-  top: 1rem;
-  right: 1vw;
+.welcome a {
   color: #fff;
 }
 .hero {
@@ -122,4 +154,30 @@ form input:is([type='submit']) {
 .hero p {
   font-size: clamp(1rem, 2vw + 1rem, 3rem);
   color: white;
+}
+
+/** Employees */
+.profile-pic {
+  margin-inline: auto;
+  inline-size: 4rem;
+}
+.profile-pic img {
+  display: block;
+  block-size: auto;
+  inline-size: 100%;
+  border-radius: 50%;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+}
+
+/** Footer */
+footer {
+  position: absolute;
+  bottom: 0;
+  padding-block: 1rem;
+  width: 100vw;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #000;
 }
