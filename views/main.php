@@ -1,10 +1,11 @@
 <?php
 require '../utils/get_current_session_role.php';
+require '../utils/get_current_session_branch.php';
 require '../shared/head.php';
 get_head('Ghost Burgers | Home');
 
 $name = $_SESSION['user'];
-$place = $_SESSION['branch'];
+$place = get_current_session_branch();
 $role = get_current_session_role();
 ?>
 
@@ -16,9 +17,11 @@ $role = get_current_session_role();
 
 <nav class="mainNav">
   <ul class="wrapper">
-    <li><a href="#">Productos</a></li>
+    <?php
+    if ($role == 'Administrador') echo '<li><a href="#">Empleados</a></li>';
+    ?>
     <li><a href="#">Sucursales</a></li>
-    <li><a href="#">Precios</a></li>
+    <li><a href="#">Productos</a></li>
   </ul>
 </nav>
 
