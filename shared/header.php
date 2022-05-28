@@ -1,20 +1,19 @@
 <?php
-require '../utils/get_current_session_role.php';
-
-function get_header($role)
+function get_header()
 {
   $name = $_SESSION['username'];
-
+  $role = $_SESSION['role'];
   echo "
     <div class='welcome'>
-      <p>Bienvenido " . $name . "</p>
+      <a href='../views/home.php'></a>
+      <p>Bienvenido " .  $name . "</p>
+      <a href='../index.php'>Salir</a>
     </div>
 
-    <a href='../index.php' class='logout'>Salir</a>
 
     <nav class='mainNav'>
       <ul class='wrapper'>";
-  if ($role == 'Administrador') echo "<li><a href='#'>Empleados</a></li>";
+  if ($role == '1') echo "<li><a href='../views/employees.php'>Empleados</a></li>";
   echo "
         <li><a href='#'>Sucursales</a></li>
         <li><a href='#'>Productos</a></li>
