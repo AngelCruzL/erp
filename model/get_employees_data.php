@@ -1,10 +1,10 @@
 <?php
 require '../config/db_connection.php';
 
-function get_employee_data($employeeId)
+function get_employees_data()
 {
   $dbConnection = dbConnection();
-  $employeeQuery = "SELECT * FROM employee WHERE id = '$employeeId'";
+  $employeeQuery = "SELECT * FROM employee";
   $employeeResult = mysqli_query($dbConnection, $employeeQuery);
   $employeeData = array();
 
@@ -12,5 +12,5 @@ function get_employee_data($employeeId)
     $employeeData[] = $row;
   }
 
-  return [$employeeData[0], $dbConnection];
+  return $employeeData;
 }
