@@ -77,7 +77,7 @@ VALUES (
   'Luis',
   'Lara',
   'luislara@email.com',
-  '123456',
+  '$2y$10$Pjr8/W5acqok1MsaPcusR.cNQu9yDU/pWYXBjgsdP3H1XjGi8X7pa',
   '12-12-12-12',
   'https://scontent.fmex10-4.fna.fbcdn.net/v/t1.18169-9/13435481_1041652459204222_2686006024059272277_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=174925&_nc_ohc=Zn-gjULkF5YAX82xWA8&_nc_ht=scontent.fmex10-4.fna&oh=00_AT-FANEQNUPPf5bAGXHoYLD4mwlanEK9kxvGkR_odVaOCw&oe=62B6C44A',
   1,
