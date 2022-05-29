@@ -10,7 +10,7 @@ $role = '';
 $branch = '';
 
 $dbConnection = dbConnection();
-$loginQuery = ("SELECT email, password, role, fullname, branch FROM employee WHERE email = '$user' AND password = '$password'");
+$loginQuery = ("SELECT email, password, role, fullname, branch FROM employee WHERE email = '$user' AND password = '$password' AND is_active = 1");
 $result = mysqli_query($dbConnection, $loginQuery);
 
 while ($row = mysqli_fetch_assoc($result)) {

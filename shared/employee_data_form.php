@@ -3,7 +3,6 @@ require '../model/get_role_data.php';
 require '../utils/get_role_name.php';
 require '../model/get_branch_data.php';
 require '../utils/get_branch_name.php';
-require '../shared/confirm_alert.php';
 
 function employee_data_form($employeeData, $dbConnection)
 {
@@ -91,8 +90,15 @@ function employee_data_form($employeeData, $dbConnection)
       </div>
     </div>
 
+    ";
+
+  if ($employeeData['role'] === '1') {
+    require '../shared/confirm_alert.php';
+
+    echo "
     <div class='mt-3 center-content'>";
-  confirm_alert('employee', 'empleado', $employeeData['id']);
-  echo "</div>
-  ";
+    confirm_alert('employee', 'empleado', $employeeData['id']);
+    echo "</div>
+    ";
+  }
 }
