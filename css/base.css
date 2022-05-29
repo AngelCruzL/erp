@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #f5e4c6;
+  font-family: 'Roboto', sans-serif;
+}
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: clamp(1.75rem, 5vw + 1rem, 4rem);
+  color: #4f190d;
+  text-shadow: 1px 1px 3px #000;
+}
+img {
+  display: block;
+  block-size: auto;
+  inline-size: 100%;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #4f190d;
+}
+table {
+  inline-size: 100%;
+  margin-inline: auto;
+}
+th {
+  padding-block: 0.5rem;
+}
+tbody tr:nth-child(odd) {
+  background-color: #fecb7d;
+}

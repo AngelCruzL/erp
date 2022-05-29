@@ -1,0 +1,14 @@
+.btn {
+  margin-block: auto;
+  padding-block: 0.75em;
+  padding-inline: 1.5em;
+  background-color: #f5e4c6;
+  color: #4f190d;
+  border: none;
+  border-radius: 0.25rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+.btn:hover {
+  color: #f5e4c6;
+  background-color: #4f190d;
+}

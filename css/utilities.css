@@ -1,0 +1,30 @@
+.wrapper {
+  inline-size: min(92vw, 75rem);
+  margin-inline: auto;
+}
+.flex-cc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logo {
+  inline-size: clamp(5rem, 40vw + 1rem, 25rem);
+}
+.mt-5 {
+  margin-block-start: 5rem;
+}
+.mt-3 {
+  margin-block-start: 3rem;
+}
+.mt-2 {
+  margin-block-start: 2rem;
+}
+.tac {
+  text-align: center;
+}
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

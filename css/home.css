@@ -1,0 +1,12 @@
+.hero {
+  position: relative;
+  min-block-size: 500px;
+  padding-block: 2rem;
+  background: url('https://images.unsplash.com/photo-1596138641000-42fda7eeb97f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80')
+    center center no-repeat;
+  background-size: cover;
+}
+.hero p {
+  font-size: clamp(1rem, 2vw + 1rem, 3rem);
+  color: white;
+}

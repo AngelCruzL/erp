@@ -1,0 +1,8 @@
+.profile-pic {
+  margin-inline: auto;
+  inline-size: 4rem;
+}
+.profile-pic img {
+  border-radius: 50%;
+  margin-inline: auto;
+}
