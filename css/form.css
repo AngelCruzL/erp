@@ -1,0 +1,37 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+form div label {
+  margin-inline-start: 2em;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+form select {
+  padding-block: 0.3rem;
+  padding-inline: 0.5rem;
+  margin-inline-start: 1rem;
+  font-family: inherit;
+  background-color: transparent;
+  border: 2px solid #4f190d;
+}
+form input:is([type='text'], [type='password'], [type='email']) {
+  padding-block: 0.3rem;
+  padding-inline: 0.5rem;
+  margin-inline-start: 1rem;
+  font-family: inherit;
+  background-color: transparent;
+  border: 2px solid #4f190d;
+}
+form input:is([type='submit']) {
+  all: unset;
+  cursor: pointer;
+  align-self: center;
+  padding-block: 0.6rem;
+  padding-inline: clamp(0.3rem, 6vw, 2rem);
+  background-color: #fecb7d;
+  color: #4f190d;
+  border-radius: 0.5em;
+  text-transform: uppercase;
+}
