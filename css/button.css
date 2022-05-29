@@ -9,6 +9,7 @@
   transition: color 0.3s ease, background-color 0.3s ease;
 }
 .btn:hover {
+  cursor: pointer;
   color: #f5e4c6;
   background-color: #4f190d;
 }

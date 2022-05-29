@@ -1,8 +1,13 @@
 .profile-pic {
   margin-inline: auto;
+  padding-block: 0.4rem;
+  block-size: 4rem;
   inline-size: 4rem;
 }
 .profile-pic img {
   border-radius: 50%;
   margin-inline: auto;
+  block-size: 4rem;
+  object-fit: cover;
+  object-position: center;
 }

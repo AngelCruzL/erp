@@ -1,22 +1,39 @@
 .card {
   display: flex;
-  max-inline-size: 48rem;
+  align-items: center;
   margin-inline: auto;
+  max-inline-size: 48rem;
+  background-color: #fecb7d;
+  border-radius: 0.7em;
+  overflow: hidden;
 }
 .card .profile-picture {
-  inline-size: 36rem;
+  inline-size: 40rem;
 }
 .card .profile-picture img {
   display: block;
-  block-size: auto;
+  max-block-size: 22rem;
   inline-size: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 .card-body form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.2rem;
+  margin-block-start: -0.4rem;
+  padding-inline-end: 1rem;
 }
 .card .send {
   align-self: flex-end;
   padding-inline-start: 3.6rem;
+  background-color: #4f190d;
+  color: #f5e4c6;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+.card .send:hover {
+  align-self: flex-end;
+  padding-inline-start: 3.6rem;
+  background-color: #f5e4c6;
+  color: #4f190d;
 }
