@@ -93,11 +93,11 @@ VALUES (
   3
 ),(
   'Maximiliano',
-  'Vergas',
+  'Vargas',
   'test1@email.com',
   '123456',
   '12-12-12-12',
-  'https://scontent.fmex10-4.fna.fbcdn.net/v/t1.18169-9/13435481_1041652459204222_2686006024059272277_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=174925&_nc_ohc=Zn-gjULkF5YAX82xWA8&_nc_ht=scontent.fmex10-4.fna&oh=00_AT-FANEQNUPPf5bAGXHoYLD4mwlanEK9kxvGkR_odVaOCw&oe=62B6C44A',
+  'https://omnifood.dev/img/customers/customer-2.jpg',
   2,
   1
 ),(
@@ -106,7 +106,7 @@ VALUES (
   'test2@email.com',
   '123456',
   '12-12-12-12',
-  'https://scontent.fmex10-4.fna.fbcdn.net/v/t1.18169-9/13435481_1041652459204222_2686006024059272277_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=174925&_nc_ohc=Zn-gjULkF5YAX82xWA8&_nc_ht=scontent.fmex10-4.fna&oh=00_AT-FANEQNUPPf5bAGXHoYLD4mwlanEK9kxvGkR_odVaOCw&oe=62B6C44A',
+  'https://omnifood.dev/img/customers/ben.jpg',
   1,
   2
 ),(
@@ -115,7 +115,7 @@ VALUES (
   'test3@email.com',
   '123456',
   '12-12-12-12',
-  'https://scontent.fmex10-4.fna.fbcdn.net/v/t1.18169-9/13435481_1041652459204222_2686006024059272277_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=174925&_nc_ohc=Zn-gjULkF5YAX82xWA8&_nc_ht=scontent.fmex10-4.fna&oh=00_AT-FANEQNUPPf5bAGXHoYLD4mwlanEK9kxvGkR_odVaOCw&oe=62B6C44A',
+  'https://omnifood.dev/img/customers/customer-5.jpg',
   4,
   2
 ),(
@@ -124,7 +124,16 @@ VALUES (
   'test4@email.com',
   '123456',
   '12-12-12-12',
-  'https://scontent.fmex10-4.fna.fbcdn.net/v/t1.18169-9/13435481_1041652459204222_2686006024059272277_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=174925&_nc_ohc=Zn-gjULkF5YAX82xWA8&_nc_ht=scontent.fmex10-4.fna&oh=00_AT-FANEQNUPPf5bAGXHoYLD4mwlanEK9kxvGkR_odVaOCw&oe=62B6C44A',
+  'https://omnifood.dev/img/customers/customer-6.jpg',
   1,
   2
+),(
+  'Steve',
+  'Miller',
+  'test5@email.com',
+  '123456',
+  '12-12-12-12',
+  'https://omnifood.dev/img/customers/steve.jpg',
+  3,
+  3
 );

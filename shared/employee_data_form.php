@@ -31,7 +31,7 @@ function employee_data_form($employeeData, $dbConnection)
 
           <div>
             <label for='password'>Contraseña</label>
-            <input name='password' id='password' type='password' value='$employeeData[password]' required />
+            <input name='password' id='password' type='password' required />
           </div>
 
           <div>
@@ -92,7 +92,7 @@ function employee_data_form($employeeData, $dbConnection)
 
     ";
 
-  if ($employeeData['role'] === '1') {
+  if ($_SESSION['role'] == '1') {
     require '../shared/confirm_alert.php';
 
     echo "

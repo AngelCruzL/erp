@@ -4,7 +4,7 @@ include '../../config/db_connection.php';
 $firstname = $_POST['firstname'];
 $lastname = $_POST['lastname'];
 $email = $_POST['email'];
-$password = $_POST['password'];
+$password = password_hash($_POST['password'], PASSWORD_BCRYPT);
 $phone_number = $_POST['phone_number'];
 $profile_picture = $_POST['profile_picture'];
 $role = $_POST['role'];
