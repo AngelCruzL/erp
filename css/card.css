@@ -24,16 +24,33 @@
   margin-block-start: -0.4rem;
   padding-inline-end: 1rem;
 }
+.card.new {
+  max-inline-size: 36rem;
+  padding-inline-end: 1rem;
+}
+.card-body.new-register {
+  padding-block: 2.4rem;
+}
+.card-body.new-register div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 .card .send {
   align-self: flex-end;
-  padding-inline-start: 3.6rem;
+  margin-inline: auto;
   background-color: #4f190d;
   color: #f5e4c6;
   transition: color 0.3s ease, background-color 0.3s ease;
 }
 .card .send:hover {
   align-self: flex-end;
-  padding-inline-start: 3.6rem;
   background-color: #f5e4c6;
   color: #4f190d;
+}
+.card-body.new-register div:last-of-type {
+  grid-column: 2 / 3;
+}
+.card-body.new-register .send {
+  margin-inline: 0;
 }
