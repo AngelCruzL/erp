@@ -5,7 +5,7 @@ require '../model/get_branch_data.php';
 require '../utils/get_branch_name.php';
 require '../shared/confirm_alert.php';
 
-function load_employee_data($employeeData, $dbConnection)
+function employee_data_form($employeeData, $dbConnection)
 {
   echo "
     <div class='card mt-5'>
@@ -14,7 +14,7 @@ function load_employee_data($employeeData, $dbConnection)
       </div>
 
       <div class='card-body'>
-        <form class='cta-form' method='POST' action='../controller/employee/update_employee.php?id=$employeeData[id]'>
+        <form method='POST' action='../controller/employee/update_employee.php?id=$employeeData[id]'>
           <div>
             <label for='firstname'>Nombre(s)</label>
             <input name='firstname' id='firstname' type='text' value='$employeeData[firstname]' required />
