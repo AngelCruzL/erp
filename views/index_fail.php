@@ -1,5 +1,5 @@
 <?php
-if (session_start()) session_destroy();
+session_destroy();
 require '../shared/head.php';
 get_head('Ghost Burgers | Login');
 ?>

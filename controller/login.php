@@ -10,17 +10,21 @@ $role = '';
 $branch = '';
 
 $dbConnection = dbConnection();
-$loginQuery = ("SELECT email, password, role, fullname, branch FROM employee WHERE email = '$user' AND password = '$password' AND is_active = 1");
-$result = mysqli_query($dbConnection, $loginQuery);
+$getEmployeeQuery = "SELECT * FROM employee WHERE email = '$user'";
+$result = mysqli_query($dbConnection, $getEmployeeQuery);
+$userQuery = mysqli_fetch_assoc($result);
+$auth = password_verify($password, $userQuery['password']);
 
-while ($row = mysqli_fetch_assoc($result)) {
-  $username = $row['fullname'];
-  $passwordDB = $row['password'];
-  $role = $row['role'];
-  $branch = $row['branch'];
-}
+if ($auth) {
+  $loginQuery = ("SELECT email, role, fullname, branch FROM employee WHERE email = '$user' AND is_active = 1");
+  $result = mysqli_query($dbConnection, $loginQuery);
 
-if ($username != '' && $passwordDB != '') {
+  while ($row = mysqli_fetch_assoc($result)) {
+    $username = $row['fullname'];
+    $role = $row['role'];
+    $branch = $row['branch'];
+  }
+
   $_SESSION['username'] = $username;
   $_SESSION['role'] = $role;
   $_SESSION['branch'] = $branch;
