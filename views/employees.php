@@ -1,6 +1,6 @@
 <?php
 session_start();
-require '../model/get_employee_data.php';
+require '../model/get_employees_data.php';
 require '../shared/head.php';
 require '../shared/header.php';
 require '../shared/footer.php';
@@ -10,7 +10,7 @@ require '../utils/get_role_name.php';
 get_head('Employees');
 get_header();
 
-$employeeData = get_employee_data();
+$employeeData = get_employees_data();
 
 echo "
 <div class='wrapper'>
@@ -39,7 +39,7 @@ foreach ($employeeData as $employee) {
       <td>" . $employee['is_active'] . "</td>
       <td>" . get_role_name($employee['role']) . "</td>
       <td>" . get_branch_name($employee['branch']) . "</td>
-      <td><a href='../controller/edit_employee.php?id=$employeeID'>Editar</a></td>
+      <td><a href='./employee.php?id=$employeeID'>Editar</a></td>
     </tr>
   ";
 }
@@ -47,7 +47,7 @@ echo "
 </table>
 </div>
 <div class='center-content mt-2'>
-<a href='../controller/create_employee.php' class='btn'>Agregar empleado</a>
+  <a href='./employee.php' class='btn'>Agregar empleado</a>
 </div>
 ";
 

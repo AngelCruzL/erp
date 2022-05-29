@@ -1,0 +1,22 @@
+.card {
+  display: flex;
+  max-inline-size: 48rem;
+  margin-inline: auto;
+}
+.card .profile-picture {
+  inline-size: 36rem;
+}
+.card .profile-picture img {
+  display: block;
+  block-size: auto;
+  inline-size: 100%;
+}
+.card-body form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+.card .send {
+  align-self: flex-end;
+  padding-inline-start: 3.6rem;
+}
