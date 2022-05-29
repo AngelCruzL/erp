@@ -17,8 +17,7 @@ echo "
   <table class='mt-5 tac'>
     <tr>
       <th>Foto</th>
-      <th>Nombre(s)</th>
-      <th>Apellido(s)</th>
+      <th>Nombre Completo</th>
       <th>Correo electrónico</th>
       <th>Número telefónico</th>
       <th>Activo</th>
@@ -29,14 +28,17 @@ echo "
 ";
 foreach ($employeeData as $employee) {
   $employeeID = $employee['id'];
+
+  if ($employee['is_active'] == 1) $isActive = 'Si';
+  else $isActive = 'No';
+
   echo "
     <tr>
       <td><div class='profile-pic'><img src='" . $employee['profile_picture'] . "'></img></div></td>
-      <td>" . $employee['firstname'] . "</td>
-      <td>" . $employee['lastname'] . "</td>
+      <td>" . $employee['fullname'] . "</td>
       <td>" . $employee['email'] . "</td>
       <td>" . $employee['phone_number'] . "</td>
-      <td>" . $employee['is_active'] . "</td>
+      <td>" . $isActive . "</td>
       <td>" . get_role_name($employee['role']) . "</td>
       <td>" . get_branch_name($employee['branch']) . "</td>
       <td><a href='./employee.php?id=$employeeID'>Editar</a></td>
