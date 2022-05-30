@@ -6,6 +6,7 @@
   background-color: #fecb7d;
   border-radius: 0.7em;
   overflow: hidden;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.35);
 }
 .card .profile-picture {
   inline-size: 40rem;
@@ -37,6 +38,7 @@
   align-items: center;
 }
 .card .send {
+  grid-column: 2 / 3;
   align-self: flex-end;
   margin-inline: auto;
   background-color: #4f190d;

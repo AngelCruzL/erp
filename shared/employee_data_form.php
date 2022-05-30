@@ -30,11 +30,6 @@ function employee_data_form($employeeData, $dbConnection)
           </div>
 
           <div>
-            <label for='password'>Contraseña</label>
-            <input name='password' id='password' type='password' required />
-          </div>
-
-          <div>
             <label for='phone_number'>Número telefónico</label>
             <input name='phone_number' id='phone_number' type='text' value='$employeeData[phone_number]' required />
           </div>

@@ -22,12 +22,7 @@ function new_employee_form($dbConnection)
 
           <div>
             <label for='email'>Correo electrónico</label>
-            <input name='email' id='email' type='email' placeholder='email.mail.com' required />
-          </div>
-
-          <div>
-            <label for='password'>Contraseña</label>
-            <input name='password' id='password' type='password' required />
+            <input name='email' id='email' type='email' placeholder='email@mail.com' required />
           </div>
 
           <div>

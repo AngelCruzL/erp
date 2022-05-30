@@ -5,7 +5,6 @@ $id = $_POST['id'];
 $firstname = $_POST['firstname'];
 $lastname = $_POST['lastname'];
 $email = $_POST['email'];
-$password = password_hash($_POST['password'], PASSWORD_BCRYPT);
 $phone_number = $_POST['phone_number'];
 $profile_picture = $_POST['profile_picture'];
 $is_active = $_POST['is_active'];
@@ -13,7 +12,7 @@ $role = $_POST['role'];
 $branch = $_POST['branch'];
 
 $dbConnection = dbConnection();
-$updateQuery = ("UPDATE employee SET firstname = '$firstname', lastname = '$lastname', email = '$email', password = '$password', phone_number = '$phone_number', profile_picture = '$profile_picture', is_active = '$is_active', role = '$role', branch = '$branch' WHERE id = '$id'");
+$updateQuery = ("UPDATE employee SET firstname = '$firstname', lastname = '$lastname', email = '$email', phone_number = '$phone_number', profile_picture = '$profile_picture', is_active = '$is_active', role = '$role', branch = '$branch' WHERE id = '$id'");
 mysqli_query($dbConnection, $updateQuery);
 
 echo "
