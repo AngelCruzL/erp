@@ -13,10 +13,11 @@ $dbConnection = dbConnection();
 $getEmployeeQuery = "SELECT * FROM employee WHERE email = '$user'";
 $result = mysqli_query($dbConnection, $getEmployeeQuery);
 $userQuery = mysqli_fetch_assoc($result);
+($userQuery['is_active'] == 1) ? $isActive = true : $isActive = false;
 $auth = password_verify($password, $userQuery['password']);
 
-if ($auth) {
-  $loginQuery = ("SELECT email, role, fullname, branch FROM employee WHERE email = '$user' AND is_active = 1");
+if ($auth && $isActive) {
+  $loginQuery = ("SELECT email, role, fullname, branch FROM employee WHERE email = '$user'");
   $result = mysqli_query($dbConnection, $loginQuery);
 
   while ($row = mysqli_fetch_assoc($result)) {

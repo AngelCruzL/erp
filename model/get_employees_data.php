@@ -4,7 +4,7 @@ require '../config/db_connection.php';
 function get_employees_data()
 {
   $dbConnection = dbConnection();
-  $employeeQuery = "SELECT * FROM employee";
+  $employeeQuery = "SELECT * FROM employee ORDER BY is_active DESC, branch ASC";
   $employeeResult = mysqli_query($dbConnection, $employeeQuery);
   $employeeData = array();
 

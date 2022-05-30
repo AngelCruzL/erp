@@ -3,7 +3,7 @@ session_start();
 require '../model/get_employees_data.php';
 require '../shared/head.php';
 require '../shared/header.php';
-require '../shared/footer.php';
+// require '../shared/footer.php';
 require '../utils/get_branch_name.php';
 require '../utils/get_role_name.php';
 
@@ -48,9 +48,9 @@ foreach ($employeeData as $employee) {
 echo "
 </table>
 </div>
-<div class='center-content mt-2'>
+<div class='center-content mt-2 mb-3'>
   <a href='./employee.php' class='btn'>Agregar empleado</a>
 </div>
 ";
 
-get_footer();
+// get_footer();

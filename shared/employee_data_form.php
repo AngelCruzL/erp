@@ -85,7 +85,7 @@ function employee_data_form($employeeData, $dbConnection)
 
           <input type='submit' class='btn send' value='Actualizar' />
 
-          <input type='text' class'hidden' style='display: none;' name='id' value='$employeeData[id]' />
+          <input type='text' class='hidden' name='id' value='$employeeData[id]' />
         </form>
       </div>
     </div>
