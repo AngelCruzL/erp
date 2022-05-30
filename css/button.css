@@ -13,3 +13,11 @@
   color: #f5e4c6;
   background-color: #4f190d;
 }
+.btn.is-secondary {
+  background-color: #4f190d;
+  color: #f5e4c6;
+}
+.btn.is-secondary:hover {
+  background-color: #f5e4c6;
+  color: #4f190d;
+}

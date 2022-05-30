@@ -1,0 +1,51 @@
+svg {
+  block-size: 1rem;
+  inline-size: 1rem;
+}
+.branch-card {
+  max-inline-size: 18rem;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  margin-block-end: 3rem;
+  background-color: white;
+}
+.branch-card img {
+  block-size: 10rem;
+  object-fit: cover;
+  object-position: center;
+}
+.branch-card-content {
+  padding-inline: 1rem;
+  padding-block: 1rem 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 0.8rem;
+}
+.branch-card-content h3 {
+  grid-column: 1 / 5;
+  font-family: 'Pacifico', cursive;
+  font-size: 1.6rem;
+}
+.branch-card-content p {
+  grid-column: 1 / 5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.branch-card-content div {
+  display: flex;
+}
+.svg-container {
+  display: flex;
+  align-items: center;
+  column-gap: 0.3rem;
+}
+.svg-container:nth-child(2n) {
+  grid-column: 3 / 4;
+}
+.branch-card-content div:last-of-type {
+  grid-column: 2 / 4;
+  align-self: flex-end;
+}

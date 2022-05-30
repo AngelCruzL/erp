@@ -23,6 +23,9 @@
 .mt-2 {
   margin-block-start: 2rem;
 }
+.mt-1 {
+  margin-block-start: 0.5rem;
+}
 .tac {
   text-align: center;
 }
@@ -33,4 +36,10 @@
 }
 .hidden {
   display: none !important;
+}
+.branches-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-block-end: 3rem;
 }
