@@ -37,15 +37,21 @@ svg {
 .branch-card-content div {
   display: flex;
 }
+.branch-card-content div:first-of-type {
+  grid-column: 1 / 3;
+}
+.branch-card-content div:last-of-type {
+  grid-column: 2 / 4;
+  justify-content: center;
+}
 .svg-container {
   display: flex;
   align-items: center;
   column-gap: 0.3rem;
 }
-.svg-container:nth-child(2n) {
-  grid-column: 3 / 4;
+.svg-container:first-child {
+  grid-column: 1 / 3;
 }
-.branch-card-content div:last-of-type {
-  grid-column: 2 / 4;
-  align-self: flex-end;
+.svg-container:nth-child(2n) {
+  grid-column: 3 / 5;
 }
