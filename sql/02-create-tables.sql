@@ -38,7 +38,8 @@ CREATE TABLE customer(
 	address VARCHAR(200) NOT NULL,
 	phone_number VARCHAR(20) NOT NULL,
 	profile_picture VARCHAR(150),
-	payment_method INT REFERENCES payment_method (id) ON DELETE SET NULL
+	payment_method INT REFERENCES payment_method (id) ON DELETE SET NULL,
+	reset_password BOOLEAN NOT NULL DEFAULT 1
 );
 
 CREATE TABLE employee(
@@ -47,12 +48,13 @@ CREATE TABLE employee(
 	lastname VARCHAR(75) NOT NULL,
 	fullname VARCHAR(151) GENERATED ALWAYS AS (CONCAT(firstname, ' ', lastname)),
 	email VARCHAR(100) NOT NULL,
-		password CHAR(60) NOT NULL,
+	password CHAR(60) NOT NULL,
 	phone_number VARCHAR(20) NOT NULL,
 	profile_picture VARCHAR(450) NOT NULL,
 	is_active BOOLEAN NOT NULL DEFAULT 1,
 	role TINYINT DEFAULT 3 REFERENCES role (id) ON DELETE SET DEFAULT,
-  branch TINYINT REFERENCES branch (id) ON DELETE SET NULL
+  branch TINYINT REFERENCES branch (id) ON DELETE SET NULL,
+	reset_password BOOLEAN NOT NULL DEFAULT 1
 );
 
 CREATE TABLE order_item(
