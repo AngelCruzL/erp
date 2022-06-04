@@ -3,17 +3,17 @@ session_start();
 require '../shared/head.php';
 require '../shared/header.php';
 require '../shared/footer.php';
-require '../model/get_branch_data.php';
-require '../config/db_connection.php';
-$dbConnection = dbConnection();
+require '../model/get_table_data.php';
 
-get_head('Employees');
+get_head('Sucursales');
 get_header();
 
-$branchData = get_branch_data($dbConnection);
+$branchData = get_table_data('branch');
 
-echo "<div class='wrapper mt-5 branches-container'>";
+echo "<div class='mt-5 wrapper branches-container'>";
 foreach ($branchData as $branch) {
+  $branchID = $branch['id'];
+
   echo "
   <div class='branch-card'>
     <header>
@@ -40,7 +40,7 @@ foreach ($branchData as $branch) {
       </div>
 
       <div class='mt-1'>
-        <a href='' class='btn is-secondary'>Editar</a>
+        <a href='./branch.php?id=$branchID' class='btn is-secondary'>Editar</a>
       </div>
     </div>
   </div>

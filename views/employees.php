@@ -1,16 +1,15 @@
 <?php
 session_start();
-require '../model/get_employees_data.php';
 require '../shared/head.php';
 require '../shared/header.php';
-// require '../shared/footer.php';
+require '../model/get_table_data.php';
 require '../utils/get_branch_name.php';
 require '../utils/get_role_name.php';
 
-get_head('Employees');
+get_head('Empleados');
 get_header();
 
-$employeeData = get_employees_data();
+$employeeData = get_table_data('employee', 'ORDER BY is_active DESC, branch ASC');
 
 echo "
 <div class='wrapper'>
@@ -48,9 +47,7 @@ foreach ($employeeData as $employee) {
 echo "
 </table>
 </div>
-<div class='center-content mt-2 mb-3'>
+<div class='mt-2 mb-3 center-content'>
   <a href='./employee.php' class='btn'>Agregar empleado</a>
 </div>
 ";
-
-// get_footer();
