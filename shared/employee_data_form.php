@@ -1,13 +1,12 @@
 <?php
-require '../model/get_role_data.php';
+require '../model/get_data_with_connection.php';
 require '../utils/get_role_name.php';
-require '../model/get_branch_data.php';
 require '../utils/get_branch_name.php';
 
 function employee_data_form($employeeData, $dbConnection)
 {
   echo "
-    <div class='card mt-5'>
+    <div class='mt-5 card'>
       <div class='profile-picture'>
         <img src='$employeeData[profile_picture]'>
       </div>
@@ -51,7 +50,7 @@ function employee_data_form($employeeData, $dbConnection)
             <label for='role'>Rol</label>
             <select name='role' id='role' required>
   ";
-  $roleData = get_role_data($dbConnection);
+  $roleData = get_data_with_connection('role', $dbConnection);
   foreach ($roleData as $role) {
     $roleID = $role['id'];
     $roleName = get_role_name($role['id']);
@@ -66,7 +65,7 @@ function employee_data_form($employeeData, $dbConnection)
           <div>
             <label for='branch'>Sucursal</label>
             <select name='branch' id='branch' required>";
-  $branchData = get_branch_data($dbConnection);
+  $branchData = get_data_with_connection('branch', $dbConnection);
   foreach ($branchData as $branch) {
     $branchID = $branch['id'];
     $branchName = get_branch_name($branch['id']);
