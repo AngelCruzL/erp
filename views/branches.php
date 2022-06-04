@@ -45,4 +45,9 @@ foreach ($branchData as $branch) {
   </div>
 ";
 }
-echo "</div>";
+echo "
+</div>
+<div class='mt-2 mb-3 center-content'>
+  <a href='./branch.php' class='btn'>Agregar Sucursal</a>
+</div>
+";
