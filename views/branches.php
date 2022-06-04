@@ -2,7 +2,6 @@
 session_start();
 require '../shared/head.php';
 require '../shared/header.php';
-require '../shared/footer.php';
 require '../model/get_table_data.php';
 
 get_head('Sucursales');

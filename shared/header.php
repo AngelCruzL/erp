@@ -18,7 +18,7 @@ function get_header()
 
   echo "
         <li><a href='../views/branches.php'>Sucursales</a></li>
-        <li><a href='#'>Productos</a></li>
+        <li><a href='../views/products.php'>Productos</a></li>
       </ul>
     </nav>
   ";
