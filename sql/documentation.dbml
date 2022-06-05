@@ -1,0 +1,118 @@
+Project GhostBurgers {
+  database_type: 'MySQL'
+  Note: '''
+    # Documentacion de la base de datos para el sitio GhostBurgers
+    *
+    Proyecto escolar para el proyecto de la asignatura de lenguajes de internet.
+  '''
+}
+
+Table "role" {
+  "id" TINYINT [pk, increment]
+  "name" VARCHAR [not null]
+
+  Note: '''
+    ## Tabla para el registro de los roles dentro del negocio.
+  '''
+}
+
+Table "branch" {
+  "id" TINYINT [pk, increment]
+  "name" VARCHAR [not null]
+  "address" VARCHAR [not null]
+  "phone_number" VARCHAR [not null]
+  "employees_number" VARCHAR [not null]
+  "picture" VARCHAR [not null]
+
+  Note: '''
+    ## Tabla para el registro de las sucursales del negocio.
+  '''
+}
+
+Table "payment_method" {
+  "id" INT [pk, increment]
+  "name" VARCHAR [not null]
+  "data" VARCHAR
+
+  Note: '''
+    ## Tabla para el registro de los métodos de pago.
+  '''
+}
+
+Table "food" {
+  "id" INT [pk, increment]
+  "name" VARCHAR [not null]
+  "price" DECIMAL [not null]
+  "description" TEXT
+  "image" VARCHAR [not null]
+  "weigh" INT [not null]
+  "slug" VARCHAR [not null]
+
+  Note: '''
+    ## Tabla para el registro de las hamburguesas.
+  '''
+}
+
+Table "customer" {
+  "id" INT [pk, increment]
+  "firstname" VARCHAR [not null]
+  "lastname" VARCHAR [not null]
+  "fullname" VARCHAR [not null]
+  "email" VARCHAR [not null]
+  "password" VARCHAR [not null]
+  "address" VARCHAR [not null]
+  "phone_number" VARCHAR [not null]
+  "profile_picture" VARCHAR
+  "payment_method" INT [ref: > payment_method.id]
+  "reset_password" BOOLEAN [not null]
+
+  Note: '''
+    ## Tabla para el registro de los datos de los clientes.
+  '''
+}
+
+Table "employee" {
+  "id" INT [pk, increment]
+  "firstname" VARCHAR [not null]
+  "lastname" VARCHAR [not null]
+  "fullname" VARCHAR [not null]
+  "email" VARCHAR [not null]
+  "password" VARCHAR [not null]
+  "phone_number" VARCHAR [not null]
+  "profile_picture" VARCHAR [not null]
+  "is_active" BOOLEAN [not null]
+  "role" TINYINT [ref: > role.id]
+  "branch" TINYINT [ref: > branch.id]
+  "reset_password" BOOLEAN [not null]
+
+  Note: '''
+    ## Tabla para el registro de los datos de los empleados.
+
+    En el campo de `role` se asigna el cargo del empleado (administrador, cocinero, repartidor)
+  '''
+}
+
+Table "order_item" {
+  "id" INT [pk, increment]
+  "food_id" INT [ref: > food.id]
+  "quantity" TINYINT [not null]
+  "unit_price" DECIMAL [not null]
+
+  Note: '''
+    ## Tabla para el registro de las hamburguesas y/o platillos dentro de un pedido.
+  '''
+}
+
+Table "order_resume" {
+  "id" INT [pk, increment]
+  "order_item" INT [ref: > order_item.id]
+  "order_date" DATE
+  "customer_id" INT [ref: > customer.id]
+  "price" DECIMAL
+  "delivered_time" TIMESTAMP
+  "id_employee" INT [ref: > employee.id]
+
+  Note: '''
+    ## Tabla para el registro del resumen de un pedido.
+  '''
+}
