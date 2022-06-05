@@ -39,4 +39,9 @@ foreach ($productData as $product) {
   </div>
 ";
 }
-echo "</div>";
+echo "
+</div>
+<div class='mt-2 mb-3 center-content'>
+  <a href='./product.php' class='btn'>Agregar Producto</a>
+</div>
+";
