@@ -5,7 +5,7 @@ require '../shared/head.php';
 require '../shared/header.php';
 require '../shared/footer.php';
 
-get_head('Empleado');
+get_head('Sucursal');
 get_header();
 
 if (isset($_GET['id'])) {

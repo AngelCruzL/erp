@@ -44,7 +44,6 @@ function branch_data_form($branchData)
         </form>
       </div>
     </div>
-
     ";
 
   if ($_SESSION['role'] == '1') {
