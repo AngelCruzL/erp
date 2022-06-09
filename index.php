@@ -12,16 +12,21 @@ get_head('Ghost Burgers | Login', true);
   <form class='mt-5 login' method='POST' action='controller/login.php'>
     <label>
       Usuario
-      <input type='text' name='user' id='user' placeholder='Usuario' required />
+      <input type='email' name='email' placeholder='correo@correo.com' required />
     </label>
 
     <label>
       Contraseña
-      <input type='password' name='password' id='password' placeholder='Contraseña' required />
+      <input type='password' name='password' placeholder='Contraseña' required />
     </label>
 
     <input type='submit' value='Ingresar' aria-label='Ingresar' id='send' />
   </form>
+
+  <div>
+    <div></div>
+    <a href="./views/forgot_password.php" class="forgot-password">¿Olvidaste tu contraseña?</a>
+  </div>
 </main>
 
 </body>

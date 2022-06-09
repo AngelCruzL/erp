@@ -2,7 +2,7 @@
 include '../config/db_connection.php';
 session_start();
 
-$user = $_POST['user'];
+$email = $_POST['email'];
 $password = $_POST['password'];
 $username = '';
 $passwordDB = '';
@@ -10,7 +10,7 @@ $role = '';
 $branch = '';
 
 $dbConnection = dbConnection();
-$getEmployeeQuery = "SELECT * FROM employee WHERE email = '$user'";
+$getEmployeeQuery = "SELECT * FROM employee WHERE email = '$email'";
 $result = mysqli_query($dbConnection, $getEmployeeQuery);
 $userQuery = mysqli_fetch_assoc($result);
 
@@ -23,7 +23,7 @@ if (!$userQuery) {
 $auth = password_verify($password, $userQuery['password']);
 
 if ($auth && $isActive) {
-  $loginQuery = ("SELECT email, role, fullname, branch FROM employee WHERE email = '$user'");
+  $loginQuery = ("SELECT email, role, fullname, branch FROM employee WHERE email = '$email'");
   $result = mysqli_query($dbConnection, $loginQuery);
 
   while ($row = mysqli_fetch_assoc($result)) {

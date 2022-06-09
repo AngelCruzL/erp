@@ -1,33 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap');
 
-/** Base */
 @import './base.css';
-
-/** Utilities */
 @import './utilities.css';
-
-/** Form */
 @import './form.css';
-
-/** Buttons */
 @import './button.css';
-
-/** Card */
 @import './employee-card.css';
-
-/** Login */
 @import './login.css';
-
-/** Header  */
 @import './header.css';
-
-/** Home */
 @import './home.css';
-
-/** Employees */
 @import './employees.css';
-
-/** Footer */
 @import './footer.css';
-
 @import './branch-card.css';
+@import './forgot-password.css';

@@ -11,6 +11,9 @@
 .logo {
   inline-size: clamp(5rem, 40vw + 1rem, 25rem);
 }
+.mb-2 {
+  margin-block-end: 2rem;
+}
 .mb-3 {
   margin-block-end: 3rem;
 }

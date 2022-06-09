@@ -47,7 +47,7 @@ CREATE TABLE employee(
 	firstname VARCHAR(75) NOT NULL,
 	lastname VARCHAR(75) NOT NULL,
 	fullname VARCHAR(151) GENERATED ALWAYS AS (CONCAT(firstname, ' ', lastname)),
-	email VARCHAR(100) NOT NULL,
+	email VARCHAR(100) UNIQUE NOT NULL,
 	password CHAR(60) NOT NULL,
 	phone_number VARCHAR(20) NOT NULL,
 	profile_picture VARCHAR(450) NOT NULL,

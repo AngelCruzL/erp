@@ -4,10 +4,18 @@
   align-items: end;
   gap: 1.2rem;
 }
+.login ~ div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 .errorMessage > p {
   color: #f00;
   font-size: 1.2rem;
 }
 .errorMessage .mt-5 {
   margin-block-start: 2.4rem;
+}
+.forgot-password {
+  padding: 1.5em;
+  font-size: 0.72rem;
 }

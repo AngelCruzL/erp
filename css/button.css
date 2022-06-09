@@ -21,3 +21,11 @@
   background-color: #f5e4c6;
   color: #4f190d;
 }
+.btn.is-tertiary {
+  background-color: #4f190d;
+  color: #f5e4c6;
+}
+.btn.is-tertiary:hover {
+  background-color: #fecb7d;
+  color: #4f190d;
+}
